@@ -22,5 +22,16 @@ class TanitimActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+        //val adapterdenGelenVeri = intent.getSerializableExtra("veri",SuperHero::class.java)
+        val adapterdenGelenVeri = intent.getSerializableExtra("veri")as SuperHero
+
+        binding.imageView.setImageResource(adapterdenGelenVeri.gorsel)
+        binding.textKahraman.text = adapterdenGelenVeri.kahraman
+        binding.textIsim.text = adapterdenGelenVeri.isim
+        binding.textMeslek.text = adapterdenGelenVeri.meslek
+
+
     }
 }
